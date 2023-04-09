@@ -9,9 +9,10 @@ const imgs = document.querySelectorAll('img')
 // getting data from API
 
 const getData = async function (limit = 4) {
-    const page = Math.ceil(Math.random()) * 10
+    const page = Math.ceil(Math.random() * 10) 
+    // console.log(page);
     const res = await fetch(`https://picsum.photos/v2/list?page=${page}&limit=${limit}`)
-    console.log(await res.clone().json());
+    // console.log(await res.clone().json());
     return await res.clone().json()
 }
 
